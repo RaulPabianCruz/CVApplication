@@ -8,10 +8,10 @@ export default function ContactInfo() {
     email: '',
     phone: '',
   });
-  const [isDisplay, setDisplay] = useState(false);
+  const [display, toggleDisplay] = useState(false);
 
-  function toggleDisplay() {
-    setDisplay(!isDisplay);
+  function toggle() {
+    toggleDisplay(!display);
   }
 
   function updateName(e) {
@@ -28,15 +28,15 @@ export default function ContactInfo() {
 
   return (
     <div>
-      {isDisplay ? (
-        <ContactInfoDisplay contactInfo={contactInfo} onEdit={toggleDisplay} />
+      {display ? (
+        <ContactInfoDisplay contactInfo={contactInfo} onEdit={toggle} />
       ) : (
         <ContactInfoForm
           contactInfo={contactInfo}
           onNameChange={updateName}
           onEmailChange={updateEmail}
           onPhoneChange={updatePhone}
-          onSubmit={toggleDisplay}
+          onSubmit={toggle}
         />
       )}
     </div>
