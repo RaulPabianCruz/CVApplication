@@ -27,7 +27,7 @@ export default function ContactInfo() {
   }
 
   return (
-    <div>
+    <div className="contact container">
       {display ? (
         <ContactInfoDisplay contactInfo={contactInfo} onEdit={toggle} />
       ) : (
