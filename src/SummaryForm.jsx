@@ -1,6 +1,6 @@
 export default function SummaryForm({ summary, updateText, onSubmit }) {
   return (
-    <div className="summary form">
+    <form className="summary form">
       <h2 className="title">Summary/Profile</h2>
       <label className="label">
         Summary:
@@ -17,6 +17,6 @@ export default function SummaryForm({ summary, updateText, onSubmit }) {
       <button className="submit-bttn" onClick={onSubmit}>
         Submit
       </button>
-    </div>
+    </form>
   );
 }
