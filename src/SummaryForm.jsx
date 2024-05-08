@@ -14,7 +14,7 @@ export default function SummaryForm({ summary, updateText, onSubmit }) {
           onChange={updateText}
         ></textarea>
       </label>
-      <button className="submit-bttn" onClick={onSubmit}>
+      <button className="submit-bttn" type="button" onClick={onSubmit}>
         Submit
       </button>
     </form>

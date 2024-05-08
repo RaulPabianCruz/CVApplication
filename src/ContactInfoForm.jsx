@@ -34,7 +34,7 @@ export default function ContactInfoForm({
           className="input phone"
         />
       </label>
-      <button className="submit-bttn" onClick={onSubmit}>
+      <button className="submit-bttn" type="button" onClick={onSubmit}>
         Submit
       </button>
     </form>
