@@ -22,7 +22,7 @@ export default function Education() {
   }
 
   function deleteEntry(id) {
-    setEducationList(educationList.filter((eduEntry) => eduEntry.id !== id));
+    setEducationList(educationList.filter((entry) => entry.id !== id));
   }
 
   function addEntry() {
@@ -37,29 +37,33 @@ export default function Education() {
     );
   }
 
-  function updateEntryInfo(entryObj, newValue, fieldName) {
+  function getNewEntry(entry, newValue, fieldName) {
+    let newEntry = {};
     switch (fieldName) {
       case 'schoolName':
-        entryObj.schoolName = newValue;
+        newEntry = { ...entry, schoolName: newValue };
         break;
       case 'titleOfStudy':
-        entryObj.titleOfStudy = newValue;
+        newEntry = { ...entry, titleOfStudy: newValue };
         break;
       case 'startDate':
-        entryObj.startDate = newValue;
+        newEntry = { ...entry, startDate: newValue };
         break;
       case 'endDate':
-        entryObj.endDate = newValue;
+        newEntry = { ...entry, endDate: newValue };
     }
+    return newEntry;
   }
 
   function updateEntry(id, newValue, fieldName) {
-    const entryObj = educationList.find((eduEntry) => {
-      if (eduEntry.id === id) return true;
-    });
-    updateEntryInfo(entryObj, newValue, fieldName);
-    setEducationList(educationList.map((eduEntry) => eduEntry));
-    console.log(educationList);
+    const oldEntry = educationList.find((entry) => entry.id === id);
+    const newEntry = getNewEntry(oldEntry, newValue, fieldName);
+    setEducationList(
+      educationList.map((entry) => {
+        if (entry === oldEntry) return newEntry;
+        return entry;
+      }),
+    );
   }
 
   return (
