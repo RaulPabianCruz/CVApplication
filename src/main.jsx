@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import ContactInfo from './ContactInfo';
 import Summary from './Summary';
 import Education from './Education';
+import Practical from './Practical';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,5 +11,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ContactInfo />
     <Summary />
     <Education />
+    <Practical />
   </React.StrictMode>,
 );
