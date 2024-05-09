@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import EducationInfoDisplay from './EducationInfoDisplay';
-import EducationInfo from './EducationInfo';
-import EducationFormDisplay from './EducationFormDisplay';
-import EducationInfoForm from './EducationInfoForm';
+import EducationEntry from './EducationEntry';
+import EducationEntryForm from './EducationEntryForm';
 
 export default function Education() {
   const [display, setDisplay] = useState(false);
@@ -69,24 +67,39 @@ export default function Education() {
   return (
     <div className="education container">
       {display ? (
-        <EducationInfoDisplay onEdit={toggleDisplay}>
-          {educationList.map((eduEntry) => {
-            return <EducationInfo key={eduEntry.id} eduEntry={eduEntry} />;
+        <div className="education display">
+          <div className="title-container">
+            <h2 className="title">Education</h2>
+            <button onClick={toggleDisplay} className="edit-bttn">
+              Edit
+            </button>
+          </div>
+          {educationList.map((entry) => {
+            return <EducationEntry key={entry.id} eduEntry={entry} />;
           })}
-        </EducationInfoDisplay>
+        </div>
       ) : (
-        <EducationFormDisplay onAdd={addEntry} onSubmit={toggleDisplay}>
-          {educationList.map((eduEntry) => {
+        <div className="education form-display">
+          <h2 className="title">Education</h2>
+          {educationList.map((entry) => {
             return (
-              <EducationInfoForm
-                key={eduEntry.id}
-                eduEntry={eduEntry}
+              <EducationEntryForm
+                key={entry.id}
+                eduEntry={entry}
                 onUpdate={updateEntry}
                 onDelete={deleteEntry}
               />
             );
           })}
-        </EducationFormDisplay>
+          <div className="bttn-container">
+            <button className="add-bttn" onClick={addEntry}>
+              +
+            </button>
+            <button className="submit-bttn" onClick={toggleDisplay}>
+              submit
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

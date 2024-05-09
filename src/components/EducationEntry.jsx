@@ -1,4 +1,4 @@
-export default function EducationInfo({ eduEntry }) {
+export default function EducationEntry({ eduEntry }) {
   return (
     <div className="education info-container">
       <h3 className="title">

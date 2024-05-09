@@ -1,4 +1,4 @@
-export default function EducationInfoForm({ eduEntry, onUpdate, onDelete }) {
+export default function EducationEntryForm({ eduEntry, onUpdate, onDelete }) {
   return (
     <form className="education form">
       <label className="label">
