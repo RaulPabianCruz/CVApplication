@@ -1,0 +1,94 @@
+.education.container {
+    margin-bottom: 15px;
+}
+
+/* Education Form Styling */
+
+.education.form-display {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 15px;
+}
+
+.education.form {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15px;
+}
+
+.education.form > .label {
+    display: flex;
+    flex-direction: column;
+}
+
+.education.form > .label.schoolName {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.education.form > .label.study-title {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.education.form > .label.start-date {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.education.form > .label.end-date {
+    grid-column: 2/3;
+    grid-row: 2/3;
+} 
+
+.education.form > .del-bttn {
+    height: 40px;
+    width: 80px;
+    align-self: end;
+    justify-self: end;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.education.form-display > .bttn-container {
+    display: flex;
+}
+
+.education > .bttn-container > .add-bttn {
+    height: 40px;
+    width: 40px;
+}
+
+.education > .bttn-container > .submit-bttn {
+    height: 40px;
+    width: 80px;
+    margin-left: auto;
+}
+
+/* Education Display Styling */
+
+.education.display {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+}
+
+.education.display > .title-container {
+    display: flex;
+}
+
+.education > .title-container > .edit-bttn {
+    height: 40px;
+    width: 80px;
+    margin-left: 5px;
+}
+
+.education.info-container > .dates {
+    font-style: italic;
+}

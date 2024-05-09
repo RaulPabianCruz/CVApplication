@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import EducationEntry from './EducationEntry';
 import EducationEntryForm from './EducationEntryForm';
+import '../styles/Education.css';
 
 export default function Education() {
   const [display, setDisplay] = useState(false);
