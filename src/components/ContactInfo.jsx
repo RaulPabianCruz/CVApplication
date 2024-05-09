@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ContactInfoDisplay from './ContactInfoDisplay';
 import ContactInfoForm from './ContactInfoForm';
+import '../styles/Contact.css';
 
 export default function ContactInfo() {
   const [contactInfo, setContactInfo] = useState({
