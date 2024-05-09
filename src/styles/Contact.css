@@ -1,0 +1,63 @@
+.contact.container {
+    margin-bottom: 15px;
+}
+
+/* contact form styling */
+.contact.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact.form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15px;
+}
+
+.contact.form > .label  {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact.form > .name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.contact.form > .email {
+    grid-column: 1/2;
+    grid-row: 2/3
+}
+
+.contact-form > .phone {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.contact.form > .submit-bttn {
+    height: 40px;
+    width: 80px;
+    align-self: end;
+    justify-self: end;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+/* contact info display styling */
+
+.contact.display {
+    display: flex;
+}
+
+.contact.display > .profile-pic {
+    height: 200px;
+    width: 200px;
+}
+
+.contact.display > .edit-bttn {
+    height: 40px;
+    width: 80px;
+    align-self: end;
+    margin-left: auto;
+}
