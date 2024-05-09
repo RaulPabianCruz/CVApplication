@@ -48,10 +48,11 @@ label {
 }
 
 button {
+  background-color: lightgray;
   font-size: .9rem;
+  padding: 10px;
   border-radius: 15px;
   border: solid black 1px;
-  background-color: lightgray;
   opacity: .9;
 }
 
