@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SummaryDisplay from './SummaryDisplay';
 import SummaryForm from './SummaryForm';
+import '../styles/Summary.css';
 
 export default function Summary() {
   const [summary, setSummary] = useState('');

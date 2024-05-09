@@ -3,7 +3,7 @@ export default function SummaryForm({ summary, updateText, onSubmit }) {
     <form className="summary form">
       <h2 className="title">Summary/Profile</h2>
       <label className="label">
-        Summary:
+        Write a brief summary of yourself:
         <textarea
           name=""
           id=""

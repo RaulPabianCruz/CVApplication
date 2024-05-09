@@ -1,0 +1,39 @@
+.summary.container {
+    margin-bottom: 15px;
+}
+
+/* Summary Form Styling */
+
+.summary.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary.form > .label {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary.form > .submit-bttn {
+    height: 40px;
+    width: 80px;
+    margin-top: 5px;
+    align-self: end;
+}
+
+/* Summary Display Styling */
+
+.summary.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary.display > .title.container {
+    display: flex;
+}
+
+.summary.display > .title.container > .edit-bttn {
+    height: 40px;
+    width: 80px;
+    margin-left: 5px;
+}
