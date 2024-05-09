@@ -9,48 +9,52 @@ export default function PracticalEntryForm({
 }) {
   return (
     <div className="practical entry-form">
-      <label className="label">
-        Company Name:
-        <input
-          type="text"
-          className="company-name"
-          value={entry.companyName}
-          onChange={(e) => updateEntry(entry.id, e.target.value, 'companyName')}
-        />
-      </label>
-      <label className="label">
-        Position:
-        <input
-          type="text"
-          className="position"
-          value={entry.position}
-          onChange={(e) => updateEntry(entry.id, e.target.value, 'position')}
-        />
-      </label>
-      <label className="label">
-        Start Date:
-        <input
-          type="date"
-          className="start-date"
-          value={entry.startDate}
-          onChange={(e) => updateEntry(entry.id, e.target.value, 'startDate')}
-        />
-      </label>
-      <label className="label">
-        End Date:
-        <input
-          type="date"
-          className="end-date"
-          value={entry.endDate}
-          onChange={(e) => updateEntry(entry.id, e.target.value, 'endDate')}
-        />
-      </label>
+      <div className="practical input container">
+        <label className="label company-name">
+          Company Name:
+          <input
+            type="text"
+            className="company-name"
+            value={entry.companyName}
+            onChange={(e) =>
+              updateEntry(entry.id, e.target.value, 'companyName')
+            }
+          />
+        </label>
+        <label className="label position">
+          Position:
+          <input
+            type="text"
+            className="position"
+            value={entry.position}
+            onChange={(e) => updateEntry(entry.id, e.target.value, 'position')}
+          />
+        </label>
+        <label className="label start-date">
+          Start Date:
+          <input
+            type="date"
+            className="start-date"
+            value={entry.startDate}
+            onChange={(e) => updateEntry(entry.id, e.target.value, 'startDate')}
+          />
+        </label>
+        <label className="label end-date">
+          End Date:
+          <input
+            type="date"
+            className="end-date"
+            value={entry.endDate}
+            onChange={(e) => updateEntry(entry.id, e.target.value, 'endDate')}
+          />
+        </label>
+      </div>
       <h4 className="responsibility title">Responsibilities: </h4>
-      <ul className="responsibility list-container">
+      <ul className="responsibility-form list-container">
         {respList.map((resp, index) => {
           let respId = entry.responsibilities[index];
           return (
-            <li className="responsibility-container list-item" key={respId}>
+            <li className="responsibility list-item" key={respId}>
               <input
                 type="text"
                 className="responsibility desc"
@@ -71,7 +75,7 @@ export default function PracticalEntryForm({
           type="button"
           onClick={() => addResp(entry.id)}
         >
-          add responsibility
+          +
         </button>
       </ul>
       <button
@@ -79,7 +83,7 @@ export default function PracticalEntryForm({
         type="button"
         onClick={() => delEntry(entry.id)}
       >
-        delete entry
+        delete
       </button>
     </div>
   );

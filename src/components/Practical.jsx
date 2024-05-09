@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import PracticalEntryDisplay from './PracticalEntryDisplay';
 import PracticalEntryForm from './PracticalEntryForm';
+import '../styles/Practical.css';
 
 export default function Practical() {
   const [display, setDisplay] = useState(false);
@@ -127,7 +128,7 @@ export default function Practical() {
           <div className="title-container">
             <h2 className="title">Practical Experience</h2>
             <button className="edit-bttn" onClick={toggleDisplay}>
-              edit
+              Edit
             </button>
           </div>
           {practicalList.map((entry) => {

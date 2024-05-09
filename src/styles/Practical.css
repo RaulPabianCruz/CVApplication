@@ -1,0 +1,121 @@
+.practical.container {
+    margin-bottom: 15px;
+}
+
+/* Practical Form Styling */
+
+.practical.form-display {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 15px;
+}
+
+.practical.entry-form {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.practical.input.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15px;
+}
+
+.practical.input.container > .company-name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.practical.input.container > .position {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.practical.input.container > .start-date {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.practical.input.container > .end-date {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.practical.input.container > .label {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsibility-form.list-container {
+    padding: 0;
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+}
+
+.responsibility.list-item {
+    display: flex;
+}
+
+.responsibility.list-item > .desc {
+    height: auto;
+    flex: 1 0 auto;
+}
+
+.responsibility.list-item > .del-bttn {
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+    flex: 0 0 auto;
+}
+
+.practical.entry-form > .del-bttn {
+    margin-left: auto;
+}
+
+.practical.form-display > .bttn-container {
+    display: flex;
+}
+
+.form-display > .bttn-container > .add-bttn {
+    height: 40px;
+    width: 40px;
+}
+
+.form-display > .bttn-container > .submit-bttn {
+    height: 40px;
+    width: 80px;
+    margin-left: auto;
+}
+
+/* Practical Display Styling */
+
+.practical.display {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+}
+
+.practical.display > .title-container {
+    display: flex;
+}
+
+.practical.display > .title-container > .edit-bttn {
+    height: 40px;
+    width: 80px;
+    margin-left: 5px;
+}
+
+.practical.entry-display > .dates {
+    font-style: italic;
+}
