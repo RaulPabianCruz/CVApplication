@@ -32,6 +32,8 @@ body {
 
 #root {
   padding: 30px;
+  width: 900px;
+  min-width: 500px;
 }
 
 h1 {
